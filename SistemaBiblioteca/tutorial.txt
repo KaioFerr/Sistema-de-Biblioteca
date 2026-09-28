@@ -1,0 +1,124 @@
+========================================================
+   TUTORIAL - SISTEMA DE BIBLIOTECA (Java Swing)
+   Laboratorio de Programacao - UNIFAGOC
+========================================================
+
+--------------------------------------------------------
+1. CONFIGURACAO DO PROJETO NO NETBEANS
+--------------------------------------------------------
+
+1. Abra o NetBeans IDE.
+2. Va em File > New Project.
+3. Selecione "Java with Ant" > "Java Application". Clique em Next.
+4. No campo "Project Name", digite: SistemaBiblioteca
+5. Desmarque "Create Main Class". Clique em Finish.
+6. No painel "Projects", clique com o botao direito em "Source Packages".
+7. Selecione New > Java Package. Nomeie como: biblioteca
+8. Copie todos os arquivos .java para dentro da pasta src/biblioteca/
+   (ou use o explorador de arquivos e depois atualize o projeto no NetBeans)
+9. Clique com o botao direito no projeto > Properties > Run.
+   No campo "Main Class", clique em Browse e selecione: biblioteca.Main
+10. Clique em OK e execute o projeto com F6.
+
+--------------------------------------------------------
+2. COMO NAVEGAR NO SISTEMA
+--------------------------------------------------------
+
+AO INICIAR O PROGRAMA:
+  - A Tela Principal sera exibida com tres botoes coloridos.
+  - Clique no botao desejado para abrir a tela correspondente.
+  - As telas secundarias podem ficar abertas ao mesmo tempo.
+  - Fechar uma tela secundaria NAO encerra o programa.
+  - Para sair do sistema, feche a Tela Principal.
+
+--------------------------------------------------------
+3. GERENCIAMENTO DE LIVROS
+--------------------------------------------------------
+
+ADICIONAR UM LIVRO:
+  1. Clique em "Gerenciamento de Livros" na tela principal.
+  2. Preencha os campos: Titulo, Autor, Ano (somente numeros) e ISBN.
+  3. Clique em "Adicionar Livro".
+  4. O livro aparecera na tabela com status "Sim" em Disponivel.
+
+EDITAR UM LIVRO:
+  1. Clique sobre o livro desejado na tabela para selecioná-lo.
+  2. Clique em "Editar Selecionado".
+     Os dados serao carregados nos campos automaticamente.
+  3. Altere os campos necessarios.
+  4. Clique em "Salvar Alteracoes" para confirmar.
+  5. Clique em "Limpar Campos" para cancelar a edicao.
+
+REMOVER UM LIVRO:
+  1. Clique sobre o livro na tabela.
+  2. Clique em "Remover Selecionado".
+  3. Confirme a remocao na caixa de dialogo.
+  ATENCAO: livros emprestados (Disponivel = "Nao") nao podem ser removidos.
+
+--------------------------------------------------------
+4. GERENCIAMENTO DE MEMBROS
+--------------------------------------------------------
+
+CADASTRAR UM MEMBRO:
+  1. Clique em "Gerenciamento de Membros" na tela principal.
+  2. Preencha: Nome, Matricula e Contato.
+  3. Clique em "Cadastrar Membro".
+  ATENCAO: a matricula deve ser unica (nao pode se repetir).
+
+EDITAR UM MEMBRO:
+  1. Selecione o membro na tabela.
+  2. Clique em "Editar Selecionado".
+  3. Altere os campos desejados.
+  4. Clique em "Salvar Alteracoes".
+  5. Use "Limpar Campos" para cancelar.
+
+--------------------------------------------------------
+5. GERENCIAMENTO DE EMPRESTIMOS
+--------------------------------------------------------
+
+REALIZAR UM EMPRESTIMO:
+  1. Clique em "Gerenciamento de Emprestimos" na tela principal.
+  2. No combo "Livro (disponiveis)", selecione o livro desejado.
+     Apenas livros com status "Disponivel = Sim" aparecem aqui.
+  3. No combo "Membro", selecione o membro que vai retirar o livro.
+  4. Clique em "Realizar Emprestimo".
+  5. O emprestimo aparecera na tabela com status "Ativo".
+     O livro sera marcado como indisponivel automaticamente.
+
+ENCERRAR UM EMPRESTIMO (devolucao):
+  1. Clique sobre o emprestimo ATIVO na tabela para selecioná-lo.
+  2. Clique em "Encerrar Emprestimo Selecionado".
+  3. Confirme na caixa de dialogo.
+  4. A data de devolucao sera registrada e o livro voltara a ficar disponivel.
+  ATENCAO: somente emprestimos com status "Ativo" podem ser encerrados.
+
+ATUALIZAR COMBOS:
+  - Clique em "Atualizar Combos" para recarregar a lista de livros e membros
+    caso tenha feito alteracoes em outras telas sem fechar esta janela.
+  - Tambem ha atualizacao automatica toda vez que a janela recebe foco.
+
+--------------------------------------------------------
+6. OBSERVACOES IMPORTANTES
+--------------------------------------------------------
+
+- Os dados ficam apenas na MEMORIA do programa.
+  Ao fechar o sistema, todos os dados sao perdidos.
+  (Para persistencia, seria necessario banco de dados ou arquivos.)
+
+- A coluna "Disponivel" na tela de Livros indica se o livro
+  pode ser emprestado: "Sim" = disponivel, "Nao" = emprestado.
+
+- A tabela de emprestimos exibe TODOS os registros (ativos e encerrados).
+
+- Para abrir multiplas janelas ao mesmo tempo, basta clicar
+  nos botoes do menu principal mais de uma vez.
+
+- A ordem das operacoes sugerida para testes:
+  1. Cadastrar alguns livros
+  2. Cadastrar alguns membros
+  3. Realizar emprestimos
+  4. Encerrar emprestimos
+
+========================================================
+   Fim do Tutorial
+========================================================
